@@ -23,7 +23,7 @@ public class LL_Traverse {
     	Node next; 
     	Node(int val) {
     		this.data = val;
-    		this.next =null;
+    		this.next = null;
     	}
     }
 	public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class LL_Traverse {
 		Node fourth =  new Node(4);
 		
 		head.next = second ;
-		second.next= third;
+		second.next = third;
 		third.next = fourth;
 		
 	    Node cur = head; //cur is pointing to head;
