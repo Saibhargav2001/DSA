@@ -17,8 +17,7 @@ public class ReverseArray {
 
 Print Linkedlist
 public class LL_Traverse {
-	
-	
+
     static class Node{
     	int data; 
     	Node next; 
