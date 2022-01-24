@@ -8,8 +8,9 @@ public class ReverseArray {
         }  
         System.out.println();                   // to go to a new line
         System.out.println("Array in the reverse order: ");   
-        for (int i = arr.length-1; i >= 0; i--) {  //loop to start the array from the end 
-            System.out.print(arr[i] + " ");  
+        for (int i = arr.length-1; i >= 0; i--)
+	{   
+            System.out.print(arr[i] + " ");       //loop to start the array from the end
         }  
     }  
 }  
