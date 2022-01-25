@@ -1,1 +1,60 @@
+//Maximum element in the stack
+import java.util.ArrayList;
 
+public class Maximum_Stack {
+	
+	static class Node{
+        int value;
+        int max;
+        Node(int x,int y){
+            this.value = x;
+            this.max = y;
+        }
+    }
+    
+    static ArrayList<Node> arr= new ArrayList<>();
+    static int size=0;
+    static int max = Integer.MIN_VALUE;
+    
+    
+    public static void push(int val) {
+       if(val>max){                          //when current element is greater than the previous maximum
+           arr.add(new Node(val,val));
+           max=val;
+       }
+       else{
+           arr.add(new Node(val,max));
+       }
+       size++;
+    }
+    
+    public static void pop() {
+        if(size==0){                      //top element will be removed
+            return ;
+        }
+        arr.remove(--size);    
+    }
+    
+    public int top() {
+        if(size==0){
+            return -1;
+        }
+        return arr.get(size-1).value;
+    }
+    
+    public static int getMax() {
+        return arr.get(size-1).max;
+    }
+	public static void main(String[] args) {
+		 push(1);
+		 push(4);
+		 push(2);
+		 push(3);
+		 push(5);
+		 System.out.println(getMax());
+		 pop();
+		 System.out.println(getMax());
+		 
+	}
+
+}
