@@ -1,1 +1,61 @@
+//Adding elements in hashtable
+import java.io.*;
+import java.util.*;
+  
+class AddElements {
+    public static void main(String args[])
+    {
+        Hashtable<Integer, String> h1 = new Hashtable<>();
+        Hashtable<Integer, String> h2 = new Hashtable<Integer, String>();
 
+        h1.put(1, "A");                 //Inserting the elements
+        h1.put(2, "E");
+        h1.put(3, "I");
+  
+        h2.put(1, "X");
+        h2.put(2, "Y");
+        h2.put(3, "Z");
+        
+        System.out.println("Mappings of hash1 : " + h1);   //Prints the mappings respectively
+        System.out.println("Mappings of hash2 : " + h2);
+    }
+}
+
+//Removing elements in hashtable
+import java.io.*;
+import java.util.*;
+class RemovingElements {
+  
+    public static void main(String args[])
+    {
+        
+        Map<Integer, String> h = new Hashtable<Integer, String>();
+        
+        h.put(1, "Geeks");          //Inserting the elements
+        h.put(2, "For");
+        h.put(3, "Geeks");
+        h.put(4, "For");
+  
+        System.out.println("Initial map : " + ht);             //Original
+        ht.remove(4);
+        System.out.println("Updated map : " + ht);             //Updated
+    }
+}
+
+//Traversal of a hashtable
+import java.util.Hashtable;
+import java.util.Map;
+  
+public class TraversalHash {
+    public static void main(String[] args)
+    {
+        Hashtable<String, Integer> ht = new Hashtable<>();
+
+        ht.put("vishal", 10);              //Inserting the elements
+        ht.put("sachin", 30);
+        ht.put("vaibhav", 20);
+ 
+        for (Map.Entry<String, Integer> e : ht.entrySet())           //Loop for traversal
+            System.out.println(e.getKey() + " "+ e.getValue());
+    }
+}
